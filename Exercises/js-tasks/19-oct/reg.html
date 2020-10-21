@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 2;
+        padding: 0;
+
+    }
+
+    body {
+
+        background-position: center;
+        background-size: cover;
+        font-family: sans-serif;
+        margin-top: 40px;
+
+    }
+
+    .regform {
+        width: 500px;
+        background-color: rgb(147, 20, 62);
+        margin: auto;
+        color: #ffffff;
+        padding: 3px 0px 10px 0px;
+        text-align: center;
+        border-radius: 15px 10px 0px 0px;
+
+    }
+
+    .main {
+        background-color: rgb(235, 128, 133);
+        width: 500px;
+        margin: auto;
+        height: 300px;
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    #name {
+        width: 100%;
+
+    }
+
+
+    .firstname {
+        padding: 0 22px;
+        color: black;
+        line-height: 30px;
+        border-radius: 6px;
+        width: 73%;
+        font-size: 18px;
+        margin: 10px;
+        
+    }
+
+  
+
+    .name {
+
+        width: 73%;
+        margin-left: 25px;
+        margin-top: 30px;
+        width: 125px;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .lastlabel {
+        width: 73%;
+        left: 417px;
+        top: -80px;
+        color: black;
+        line-height: 30px;
+        border-radius: 6px;
+        padding: 0 22px;
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    .email {
+        width: 73%;
+        left: 417px;
+        top: -80px;
+        color: rgb(255, 248, 251);
+        line-height: 30px;
+        border-radius: 6px;
+        padding: 0 22px;
+        font-size: 18px;
+        margin: 10px;
+    }
+    
+
+    .password1 {
+        width: 73%;
+        left: 417px;
+        top: -80px;
+        color: black;
+        line-height: 30px;
+        border-radius: 6px;
+        padding: 0 22px;
+        font-size: 18px;
+        margin: 10px;
+    }
+    .term{
+        margin: auto;
+        margin-left: 19px;
+        margin-top: -18px;
+    }
+    .sub{
+        margin-left: 300px;
+        background-color:darkseagreen;
+        padding: 7px;
+        width: 35%;
+        border-radius: 30px;
+        
+
+    }
+</style>
+
+<body>
+
+    <div class="regform">
+        <h1>Creat an Account </h1>
+    </div>
+    <div class="main">
+        <form  class="input" onsubmit=return validation()>
+        <div id="name">
+
+                <div>
+                    <i class='bx bxs-user'></i>
+                    <input  class="firstname" type="text" placeholder="Name" id="username">
+                    <span id="usererror" class="text-danger font-weight-bold"></span>
+
+
+                </div>
+                <div>
+                    <i class='bx bx-mobile'></i>
+                    <input class="lastlabel" type="text" placeholder="Phone Number" id="number" value="">
+                    <span id="mobileerror" class="text-danger font-weight-bold"></span>
+                </div>
+                <div>
+                    <i class='bx bx-envelope-open'></i>
+                    <input class="email" type="text" placeholder="Email" id="email">
+                    <span id="emailerror" class="text-danger font-weight-bold"></span>
+                </div>
+                <div>
+                    <i class='bx bxs-lock'></i>
+                    <input class="password1" type="text" placeholder="Password" id="password">
+                    <span id="passworderror" class="text-danger font-weight-bold"></span>
+                </div>
+
+            </div>
+            <input  type="checkbox" id="male">
+            <p class="term">I agree to the <a href="">Termas and Condtions</a> and <a href="">privacy policy</a></p>
+
+            <input type="submit"  class="sub"></input>
+        </form>
+            
+            <script>
+                function validation() {
+                    var username = document.getElementById('username').Value;
+                    var username = document.getElementById('number').Value;
+                    var username = document.getElementById('email').Value;
+                    var username = document.getElementById('password').Value;
+
+                    var usercheck = /^[A-Za-z. ]{3,30}$/;
+                    var passwordcheck = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+                    var emailcheck = /^[A-Za-z_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+                    var mobilecheck = /^[789][0-9]-[0-9]{3}-[0-9]{3}$/;
+
+                    if (usercheck.test(username)) {
+                        document.getElementById('usereror').innerHtml = " ";
+
+                    } else {
+                        document.getElementById('usererror').innerHtml = "**username is Invalid";
+                        return false;
+                    }
+
+                    if (passwordcheck.test(password)) {
+                        document.getElementById('passworderror').innerHtml = " ";
+
+                    } else {
+                        document.getElementById('passworderror').innerHtml = "**password is Invalid";
+                        return false;
+                    }
+                    if (emailcheck.test(email)) {
+                        document.getElementById('emailerror').innerHtml = " ";
+
+                    } else {
+                        document.getElementById('emailerror').innerHtml = "**email is Invalid";
+                        return false;
+                    }
+                    if (mobilecheck.test(number)) {
+                        document.getElementById('mobileerror').innerHtml = " ";
+
+                    } else {
+                        document.getElementById('mobileerror').innerHtml = "**mobile is Invalid";
+                        return false;
+                    }
+
+                }
+            </script>
+
+
+
+</body>
+
+</html>

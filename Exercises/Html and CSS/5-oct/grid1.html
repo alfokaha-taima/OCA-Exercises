@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise#1-Grid</title>
+</head>
+<style>
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        background-color: white;
+        padding: 15px;
+        grid-gap:10px
+    }
+    .grid-item1{
+background-color: black;
+border: 0px solid white;
+grid-column-start: 1;
+grid-column-end:4;
+padding: 40px;
+
+    }
+   
+    .grid-item2{
+background-color: orange;
+border: 0px solid white;
+padding: 25px;
+grid-column-start: 1;
+grid-column-end: 3;
+padding: 150px;
+    }
+    .grid-item3{
+background-color: green;
+border: 0px solid white;
+padding: 10px;
+    }
+  
+    .grid-item4{
+background-color: blue;
+border: 0px solid white;
+grid-column-start:1 ;
+grid-column-end: 4;
+padding: 80px;
+    }
+</style>
+<body>
+    <div class="grid-container" >
+    <div class="grid-item1" ></div>
+    <div class="grid-item2" ></div>
+    <div class="grid-item3" ></div>
+    <div class="grid-item4" ></div>
+    </div>
+</body>
+</html>

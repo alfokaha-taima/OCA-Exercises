@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = 3;
+        var a = x;
+        var y = 5;
+        var b = 2;
+        var c = -7;
+
+        var int = Number.isInteger(x) && Number.isInteger(y)
+        if (int && x === y) {
+            document.write("both numbers are equal");
+        } else if (int) {
+            document.write("large number is " + Math.max(x, y));
+
+        } else {
+            document.write("Please add an integer!");
+        }
+      
+
+        if (a + b + c >= 0) {
+            alert("The sign is +");
+        } else if (a < 0 && b < 0 && c < 0) {
+            alert("The sign is -");
+        } else if (a > 0 && b < 0 && c < 0) {
+            alert("The sign is +");
+        } else if (a < 0 && b > 0 && c < 0) {
+            alert("The sign is +");
+        } else {
+            alert("The sign is -");
+        }
+        document.write("<br>");
+
+
+        var C = 4;
+        var A = -1;
+        var B = 0;
+        if (A > B && A > C) {
+            if (B > C) {
+                alert(A + ',' + B + ',' + C);
+
+            } else {
+                alert(A + ',' + C + ',' + B);
+            }
+        } else if (C > A && C > B) {
+            if (A > B) {
+                alert(C + ',' + A + ',' + B);
+            } else {
+                alert(C + ", " + B + ", " + A);
+            };
+        } else if (B > A && B > C) {
+            if (A > C) {
+                alert(B + ',' + A + ',' + C);
+            } else {
+                alert(B + ',' + C + ',' + A);
+            }
+
+        } else {
+            alert(C + ',' + A + ',' + B);
+        }
+
+        a = -5;
+        b = -2;
+        c = -6;
+        d = 0;
+        f = -1;
+        if (a > b && a > c && a > d && a > f) {
+            alert(a);
+        } else if (b > a && b > c && b > d && b > f) {
+           alert(b);
+        } else if (c > a && c > b && c > d && c > f) {
+           alert(c);
+        } else if (d > a && d > c && d > b && d > f) {
+            alert(d);
+        } else {
+            alert(f);
+        } document.write("<br>");
+       
+        
+        
+        x=4;
+        y=8;
+        if(x>y){
+            document.write('Hello world');
+        }else{
+           document.write(' Goodbye.');
+        }
+        document.write("<br>");
+        var colors=[["0","black"],["1","white"],["2","red"],["3","blue"],["4","pink"]];
+        document.write(colors);
+       
+        document.write("<br>");
+        colors.push
+         
+    </script>
+</body>
+
+</html>
