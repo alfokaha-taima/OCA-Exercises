@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body{
+    margin: 0px;
+    padding: 0px;
+  }
+  input{
+    padding: 10px;
+    width: 20%;
+
+  }
+  fieldset{
+    width: 40%;
+  }
+</style>
+<body>
+    
+  
+   <fieldset>
+     <legend>Key&Value</legend>
+    
+     <input type="text" id="inpkey" placeholder="key">
+   <input type="text"  id="inpvalue" placeholder="value">
+   </fieldset>
+        <div>
+            <button id="loc">Local Submit</button>
+            <button id="ses">session Submit</button>
+            <button id="clr">Clear</button>
+            
+
+        </div>  
+       <script>
+           
+  
+
+
+   
+    let n=document.getElementById("inpkey");
+    let p=document.getElementById("inpvalue");
+    const btn=document.getElementById("loc");
+
+    //local storage
+    btn.onclick=function(){
+      const n=inpkey.value;
+      const p=inpvalue.value;
+        
+     if(n && p){
+       localStorage.setItem(n,p);
+     }};
+     //session storage
+     const btn2=document.getElementById("ses");
+     btn2.onclick=function(){
+      const n=inpkey.value;
+      const p=inpvalue.value;
+      if(n && p){
+       sessionStorage.setItem(n,p);
+       location.reload();
+     }};
+
+     //clean
+     const btn3=document.getElementById("clr");
+     btn3.onclick=function(){
+     
+       sessionStorage.clear(n,p);
+       localStorage.clear(n,p);
+      
+     };
+     
+
+   
+   
+
+
+   
+       </script>
+
+
+</body>
+</html>
